@@ -17,11 +17,12 @@ const StyledLayout = styled(Layout)`
   min-height: 500px;
 `;
 
-function App() {
+function System() {
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+  
   return (
     <StyledLayout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -82,4 +83,4 @@ function App() {
   );
 };
 
-export default App;
+export default System;
