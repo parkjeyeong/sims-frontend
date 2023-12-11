@@ -1,8 +1,10 @@
-import { Form, Input, Button, Layout } from 'antd';
+import { Form, Input, Layout } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
+import Button from '../../ui/button/Button';
 
 function Portal() {
+  /* <style> */
   const MainLayout = styled(Layout)`
     display: flex;
     justify-content: center;
@@ -20,17 +22,16 @@ function Portal() {
     box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 10%);
   `;
 
-  const SigninButton = styled(Button)`
-    width: 100%;
-  `;
-
   const Title = styled.h1`
     font-weight: 700;
   `;
+  /* </style> */
 
+  /* <script> */
   function onFinish(values) {
     console.log(values);
   }
+  /* </script> */
 
   return (
     <MainLayout>
@@ -63,9 +64,7 @@ function Portal() {
           />
         </Form.Item>
         <Form.Item>
-          <SigninButton type="primary" htmlType="submit" className="Signin-form-button">
-            Sign in
-          </SigninButton>
+          <Button type="primary" width="full" height="32px" htmlType="submit">Sign in</Button>
         </Form.Item>
       </SigninForm>
     </MainLayout>
